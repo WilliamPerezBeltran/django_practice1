@@ -1,12 +1,15 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-  <h1>Book List</h1>
-  {% if book_list %}
 
+
+  <h1>Book List</h1>
   <a href="{% url 'book_create' %}">
     <p class="btn btn-primary">Create autor </p>
   </a>
+  {% if book_list %}
+
+  
   <ul>
     {% for book in book_list %}
       <li>
